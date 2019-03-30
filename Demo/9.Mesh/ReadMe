@@ -1,3 +1,5 @@
 使用assimp处理模型没有成功,模型加载应该是成功的,估计问题是出在显示的地方,还未找到原因.
 
 在该文件夹下有一个sample,对整体项目进行编译时可以正常加载模型,但是将相关文件提取出来自己编译之后同样无法显示模型,因此怀疑是assimp库出了问题,但是重新配置之后仍然无法正常工作
+
+最终找到原因是由于GLM库的问题,解决方法是用 ./another_sample/includes/glm 文件夹 替换 /usr/local/includes/glm 文件夹, 这里的文件夹来源是:https://github.com/JoeyDeVries/LearnOpenGL
